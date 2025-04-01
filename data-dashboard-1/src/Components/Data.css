@@ -1,0 +1,26 @@
+.station-container {
+    max-height: 400px; /* Set your desired height */
+    overflow-y: auto;
+    border: 1px solid #ccc; /* Optional: adds a border around the container */
+    border-radius: 4px; /* Optional: rounds the corners */
+    padding: 10px;
+    margin: 20px 0;
+  }
+
+.station {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid #ccc;
+    background-color: #009ad9;
+}
+
+.station p:first-child {
+    text-align: left;
+}
+
+.station p:last-child {
+    text-align: right;
+}
