@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Data.css';
 
 // notes:
@@ -63,6 +64,7 @@ const Data = ({ data }) => {
                             <a href={`https://www.google.com/maps/@${station.gtfs_latitude},${station.gtfs_longitude},18z`} target="_blank" rel="noopener noreferrer">
                                 <p>{station.name}</p>
                             </a>
+                            <Link to={`/station/${station.abbr}`}>View Details</Link>
                         </div>
                     ))
                 : data && data.map((station, index) => (
@@ -72,7 +74,7 @@ const Data = ({ data }) => {
                         <a href={`https://www.google.com/maps/@${station.gtfs_latitude},${station.gtfs_longitude},18z`} target="_blank" rel="noopener noreferrer">
                             <p>{station.name}</p>
                         </a>
-
+                        <Link to={`/station/${station.abbr}`}>View Details</Link>
                     </div>
                 )
                 )}

@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './App.css'
 import axios from 'axios';
 
 import Card from './Components/Card.jsx'
 import Data from './Components/Data.jsx'
+
+import StationsPerCityChart from './Components/StationsPerCityChart.jsx';
+import StationsMap from './Components/StationsMap.jsx';
 
 function App() {
   const API_KEY = import.meta.env.VITE_APP_API_KEY;
@@ -42,6 +46,9 @@ function App() {
           <Card stat={northernmostStation ? northernmostStation.name : "N/A"} description="Northernmost Station" />
           <Card stat={southernmostStation ? southernmostStation.name : "N/A"} description="Southernmost Station" />
         </div>
+        <StationsPerCityChart data={stationData} />
+        <StationsMap data={stationData} />
+        <br></br>
         <Data data={stationData}/>
       </div>
     </div>  

@@ -79,3 +79,20 @@ a {
   border-radius: 4px;
   font-size: 14px;
 }
+
+nav {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+}
+
+.home-link 
+{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  padding: 1em;
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: none;
+}
